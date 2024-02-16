@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dhk_files",
+  "info": {
+    "singularName": "dhk-file",
+    "pluralName": "dhk-files",
+    "displayName": "dhk file",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "unique": true
+    },
+    "fileId": {
+      "type": "json"
+    },
+    "uid": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "password": {
+      "type": "string"
+    }
+  }
+}

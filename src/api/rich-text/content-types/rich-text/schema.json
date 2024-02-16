@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rich_texts",
+  "info": {
+    "singularName": "rich-text",
+    "pluralName": "rich-texts",
+    "displayName": "Rich Text",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "uid": {
+      "type": "string",
+      "unique": true
+    },
+    "url": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "editCode": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    }
+  }
+}
