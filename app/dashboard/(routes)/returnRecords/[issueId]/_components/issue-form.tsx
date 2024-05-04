@@ -106,7 +106,7 @@ export const IssueForm: React.FC<CategoryFormProps> = ({
   const onSubmit = (values: z.infer<typeof IssueRecordSchema>) => {
     startTransition(() => {
       !initialData &&
-        createIssueRecord(values, books)
+        createIssueRecord(values.memberId, books)
           .then((data) => {
             if (data?.error) {
               form.reset();
