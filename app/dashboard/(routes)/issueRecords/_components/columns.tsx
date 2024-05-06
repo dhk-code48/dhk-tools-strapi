@@ -5,6 +5,7 @@ import { ColumnDef } from "@tanstack/react-table";
 import { CellAction } from "./cell-action";
 import { Book } from "@prisma/client";
 import Image from "next/image";
+import BookImage from "@/components/book-img";
 
 export type IssueRecordColumn = {
   id: string;
@@ -25,13 +26,7 @@ export const columns: ColumnDef<IssueRecordColumn>[] = [
       const book: Book = row.getValue("book");
       return (
         <div className="flex items-center gap-x-5">
-          <Image
-            src={"/img/" + book.imageUrl}
-            alt="book banner"
-            width={100}
-            height={200}
-            className="w-[40px] rounded-lg"
-          />
+          <BookImage url={book.imageUrl} />
           {book.name}
         </div>
       );

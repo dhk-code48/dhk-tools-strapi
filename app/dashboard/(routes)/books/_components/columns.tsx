@@ -4,6 +4,7 @@ import { Book } from "@prisma/client";
 import { ColumnDef } from "@tanstack/react-table";
 import { CellAction } from "./cell-action";
 import Image from "next/image";
+import BookImage from "@/components/book-img";
 
 export const BookColumns: ColumnDef<Book>[] = [
   {
@@ -11,9 +12,7 @@ export const BookColumns: ColumnDef<Book>[] = [
     header: "Image",
     cell: ({ row }) => {
       const url: string = row.getValue("imageUrl");
-      return (
-        <Image src={`/img/` + url} alt="Book Banner" width={100} height={400} />
-      );
+      return <BookImage url={url} />;
     },
   },
   {

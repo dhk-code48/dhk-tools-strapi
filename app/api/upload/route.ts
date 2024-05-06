@@ -42,6 +42,7 @@ export async function PUT(request: NextRequest) {
     const data = await request.formData();
     const img = data.get("img");
     const id = data.get("id")?.toString();
+    const format = data.get("format")?.toString();
 
     if (!img) {
       return new Response(JSON.stringify({ error: "Incomplete data" }), {
@@ -52,7 +53,7 @@ export async function PUT(request: NextRequest) {
     if (img) {
       const byteData = await new Response(img as Blob).arrayBuffer();
       const buffer = Buffer.from(byteData);
-      const path = `./public/img/${id}.jpg`;
+      const path = `./public/img/${id}.${format}`;
 
       writeFile(path, buffer, (err) => {
         console.log("ERROR => ", err);

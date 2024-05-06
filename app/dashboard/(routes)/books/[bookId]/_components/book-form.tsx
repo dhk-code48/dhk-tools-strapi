@@ -1,7 +1,7 @@
 "use client";
 
 import * as z from "zod";
-import { useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
@@ -78,6 +78,7 @@ export const BookForm: React.FC<BookFormProps> = ({
     let data = new FormData();
     data.append("img", file || "");
     data.append("id", values.id || "");
+    data.append("format", file?.name.split(".")[1] || "");
 
     try {
       const baseurl = "http://129.150.50.164:3004";
@@ -145,6 +146,10 @@ export const BookForm: React.FC<BookFormProps> = ({
           .catch(() => toast.error("Something went wrong"));
     });
   };
+
+  useEffect(() => {
+    console.log(file?.name.split(".")[1]);
+  }, [file]);
 
   return (
     <>

@@ -70,7 +70,7 @@ const LoginForm = ({ className, ...props }: UserAuthFormProps) => {
                     <Input
                       {...field}
                       disabled={isPending}
-                      placeholder="swarnim@gmail.com"
+                      placeholder="username@email.com"
                       type="email"
                     />
                   </FormControl>

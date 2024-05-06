@@ -29,6 +29,7 @@ import { updateIssueRecord } from "@/actions/updateIssueRecord";
 import { getBookById } from "@/actions/getBookById";
 import Image from "next/image";
 import { deleteIssueRecord } from "@/actions/deleteIssueRecord";
+import BookImage from "@/components/book-img";
 
 // type CategoryFormValues = z.infer<typeof IssueRecordSchema>;
 
@@ -223,13 +224,7 @@ export const IssueForm: React.FC<CategoryFormProps> = ({
                 </div>
                 {bookInfo[i] && (
                   <div className="flex gap-x-5">
-                    <Image
-                      src={"/img/" + bookInfo[i]?.imageUrl}
-                      alt="book banner"
-                      width={100}
-                      height={300}
-                      className="rounded-xl"
-                    />
+                    <BookImage url={bookInfo[i] ? bookInfo[i].imageUrl : ""} />
                     <div className="flex gap-y-1 flex-col items-start">
                       <p className="font-bold text-gray-800">
                         Name : {bookInfo[i]?.name}
