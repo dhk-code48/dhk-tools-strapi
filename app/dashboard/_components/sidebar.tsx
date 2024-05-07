@@ -2,6 +2,7 @@ import { Book } from "lucide-react";
 import { SidebarRoutes } from "./sidebar-routes";
 import Link from "next/link";
 import { FC } from "react";
+import Image from "next/image";
 
 export const Sidebar: FC = () => {
   return (
@@ -9,8 +10,14 @@ export const Sidebar: FC = () => {
       <div className="flex h-full max-h-screen flex-col gap-2">
         <div className="flex h-[60px] items-center border-b px-6">
           <Link className="flex items-center gap-2 font-semibold" href="#">
-            <Book className="h-6 w-6" />
-            <p>Pradesh Library</p>
+            <Image
+              src={"/gandakipradesh.png"}
+              alt="logo"
+              className="w-[50px]"
+              width={100}
+              height={100}
+            />
+            <p>Gandaki Pradesh Library</p>
           </Link>
         </div>
         <div className="flex-1 overflow-auto py-2">

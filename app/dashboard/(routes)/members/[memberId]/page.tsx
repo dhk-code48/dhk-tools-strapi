@@ -32,7 +32,7 @@ const MemberPage = async ({ params }: { params: { memberId: string } }) => {
       id: item.id,
       name: member.name,
       book: item.book,
-      createdAt: moment(item.createdAt).fromNow(),
+      createdAt: moment(item.createdAt).format("MMMM Do YYYY").toString(),
     }));
 
   return (

@@ -26,12 +26,14 @@ export const BooksClient: React.FC<BooksClientProps> = ({ data }) => {
           title={`Books (${data.length})`}
           description="Manage books for your school"
         />
-        <Button onClick={() => router.push(`/dashboard/books/new`)}>
-          <Plus className="mr-2 h-4 w-4" /> Add New
-        </Button>
-        <Link className={buttonVariants()} href="/dashboard/books/bulkImport">
-          Bulk Registration
-        </Link>
+        <div className="flex items-center gap-x-5">
+          <Button onClick={() => router.push(`/dashboard/books/new`)}>
+            <Plus className="mr-2 h-4 w-4" /> Add New
+          </Button>
+          <Link className={buttonVariants()} href="/dashboard/books/bulkImport">
+            Bulk Registration
+          </Link>
+        </div>
       </div>
 
       <DataTable searchKey="name" columns={BookColumns} data={data} />

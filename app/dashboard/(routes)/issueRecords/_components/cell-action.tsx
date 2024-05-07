@@ -91,7 +91,7 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
         <DropdownMenuContent align="end">
           <DropdownMenuLabel>Actions</DropdownMenuLabel>
           <DropdownMenuItem onClick={() => setOpenUpdateAlert(true)}>
-            <Edit className="mr-2 h-4 w-4" /> Renew Book
+            <Edit className="mr-2 h-4 w-4" /> Return Book
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => setOpenDeleteAlert(true)}>
             <Trash className="mr-2 h-4 w-4" /> Delete

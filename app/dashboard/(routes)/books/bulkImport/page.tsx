@@ -49,7 +49,7 @@ const BookBulkImport = () => {
                 stock: parseInt(row[6].toString()),
                 total: parseInt(row[6].toString()),
                 categoryId: row[7].toString(),
-                imageUrl: row[8].toString(),
+                imageUrl: "",
                 bannerUrl: null,
                 createdAt: new Date(),
                 updatedAt: new Date(),

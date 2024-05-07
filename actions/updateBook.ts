@@ -37,7 +37,7 @@ export const updateBook = async (
         authors,
         imageUrl,
         price,
-        stock: parseInt(stock),
+        total: parseInt(stock),
         publication,
         totalPages,
         categoryId,

@@ -38,7 +38,7 @@ const BookPage = async ({
       id: item.id,
       name: item.member.name,
       book: book,
-      createdAt: moment(item.createdAt).fromNow(),
+      createdAt: moment(item.createdAt).format("MMMM Do YYYY").toString(),
     }));
 
   return (

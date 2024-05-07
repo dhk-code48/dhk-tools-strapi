@@ -224,7 +224,7 @@ export const IssueForm: React.FC<CategoryFormProps> = ({
                 </div>
                 {bookInfo[i] && (
                   <div className="flex gap-x-5">
-                    <BookImage url={bookInfo[i] ? bookInfo[i].imageUrl : ""} />
+                    <BookImage url={bookInfo[i]?.imageUrl || ""} />
                     <div className="flex gap-y-1 flex-col items-start">
                       <p className="font-bold text-gray-800">
                         Name : {bookInfo[i]?.name}

@@ -27,7 +27,7 @@ export const IssueRecordsClient: React.FC<CategoriesClientProps> = ({
           description="Manage Issue Records for your site"
         />
         <Button onClick={() => router.push(`/dashboard/issueRecords/new`)}>
-          <Plus className="mr-2 h-4 w-4" /> Add New
+          <Plus className="mr-2 h-4 w-4" /> Issue Book
         </Button>
       </div>
       <Separator />

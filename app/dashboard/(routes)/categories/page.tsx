@@ -13,7 +13,7 @@ const CategoriesPage = async ({ params }: { params: { schoolId: string } }) => {
   const formattedCategories: CategoryColumn[] = categories.map((item) => ({
     id: item.id,
     name: item.name,
-    createdAt: moment(item.createdAt).fromNow(),
+    createdAt: moment(item.createdAt).format("MMMM Do YYYY").toString(),
   }));
 
   return (

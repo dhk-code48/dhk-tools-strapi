@@ -64,7 +64,7 @@ export const BookForm: React.FC<BookFormProps> = ({
     totalPages: initialData ? initialData.totalPages : "",
     categoryId: initialData ? initialData.categoryId : "",
     authors: initialData ? initialData.authors : "",
-    stock: initialData ? initialData.stock.toString() : "",
+    stock: initialData ? initialData.total.toString() : "",
   };
 
   const form = useForm<ProductFormValues>({
@@ -178,14 +178,14 @@ export const BookForm: React.FC<BookFormProps> = ({
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-8 w-full"
         >
-          {initialData && (
+          {/* {initialData && (
             <Image
               src={"/img/" + initialData.imageUrl}
               width={100}
               height={200}
               alt="book banner"
             />
-          )}
+          )} */}
           <Input
             type="file"
             placeholder="Choose Book Cover"
@@ -271,7 +271,7 @@ export const BookForm: React.FC<BookFormProps> = ({
               name="stock"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Stock</FormLabel>
+                  <FormLabel>Total Book</FormLabel>
                   <FormControl>
                     <Input
                       type="text"

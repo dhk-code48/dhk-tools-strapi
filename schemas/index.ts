@@ -29,7 +29,7 @@ export const IssueRecordSchema = z.object({
 
 export const BookSchema = z.object({
   name: z.string().min(1),
-  imageUrl: z.string().min(1),
+  imageUrl: z.string().optional(),
   price: z.string().min(1),
   publication: z.string().min(1),
   totalPages: z.string().min(1),

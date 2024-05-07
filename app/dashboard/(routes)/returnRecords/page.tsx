@@ -21,7 +21,7 @@ const IssueRecordsPage = async () => {
     id: item.id,
     name: item.member.name,
     book: item.book,
-    createdAt: moment(item.updatedAt).fromNow(),
+    createdAt: moment(item.updatedAt).format("MMMM Do YYYY").toString(),
   }));
 
   return (
